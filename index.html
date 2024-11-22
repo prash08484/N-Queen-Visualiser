@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>N-Queen-Visualiser</title>
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-    />
-    <link rel="stylesheet" href="style.css" />
-  </head>
 
-  <body>
-    <header class="header"> 
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>N-Queen-Visualiser</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="Chess_queen.png">
+
+  <style>
+    .main {
+      margin-bottom: 200px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="main">
+    <header class="header">
       <h2>
         N-Queens Visualiser <i class="fas fa-crown" style="color: #fdfffc"></i>
       </h2>
@@ -24,14 +30,7 @@
       </div>
 
       <div class="slider-container">
-        <input
-          class="slider"
-          id="slider"
-          type="range"
-          min="0"
-          max="100"
-          value="60"
-        />
+        <input class="slider" id="slider" type="range" min="0" max="100" value="60" />
         <div id="progress-bar"></div>
       </div>
       <button class="play-button" id="play-button">
@@ -42,5 +41,16 @@
     <div class="queen-arrangement" id="queen-arrangement"></div>
     <div id="n-queen-board"></div>
     <script src="app.js"></script>
-  </body>
+
+
+  </div>
+
+  <!-- Let's connect  -->
+  <div class="center-button">
+    <a href="https://in.linkedin.com/in/prash-nitp" target="_blank" class="button">
+      Let's Connect
+    </a>
+  </div>
+</body>
+
 </html>

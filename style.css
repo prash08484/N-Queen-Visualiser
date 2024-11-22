@@ -227,3 +227,35 @@ h4 {
   text-align: center;
   border-radius: 4px 4px 0 0;
 }
+/* Let's connect section  */
+
+.center-button {
+  text-align: center;
+}
+
+.button {
+  margin-top: 10px;
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 18px; 
+  color: #f7f2f4; 
+  background-color:#0077B5; 
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #005983;
+} 
+
+.center-div {
+  background-color: #4CAF50; 
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+}
+.center-div img{
+   width: 200px;
+  height: 5px;
+}
