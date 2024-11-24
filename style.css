@@ -1,4 +1,4 @@
-* {
+/* * {
   box-sizing: border-box;
 }
 
@@ -25,8 +25,7 @@ div.n-queen {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 70%;
-  max-width: 450px;
-  /* border: 1px solid red; */
+  max-width: 450px; 
 }
 
 .inputbox {
@@ -66,11 +65,9 @@ div.n-queen {
 .slider-container {
   position: absolute;
   left: 5%;
-  width: 90%;
-  /* text-align: center; */
+  width: 90%; 
   margin: 0 auto;
-  top: 4em;
-  /* border: 2px solid red; */
+  top: 4em; 
 }
 
 .slider {
@@ -101,8 +98,7 @@ div.n-queen {
   font-weight: 500;
   color: #fa7921;
 }
-
-/* Google chrome */
+ 
 .slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   width: 20px;
@@ -122,8 +118,7 @@ div.n-queen {
   z-index: 1;
   color: #ffba08;
 }
-
-/* Mozilla firefox */
+ 
 .slider::-moz-range-thumb {
   width: 20px;
   height: 20px;
@@ -162,8 +157,7 @@ div.n-queen {
   font-size: 16px;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.3s ease-in-out;
-  /* z-index: 1; */
+  transition: all 0.3s ease-in-out; 
 }
 
 .play-button:hover {
@@ -227,8 +221,7 @@ h4 {
   text-align: center;
   border-radius: 4px 4px 0 0;
 }
-/* Let's connect section  */
-
+ 
 .center-button {
   text-align: center;
 }
@@ -258,4 +251,234 @@ h4 {
 .center-div img{
    width: 200px;
   height: 5px;
+} */
+
+
+/* New CSS  */
+ /* General Reset */
+ * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to bottom right, #2d3436, #0c2461);
+  color: #ecf0f1;
+  overflow-x: hidden;
+  min-height: 100vh; /* Ensures the background fills the viewport height */
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  padding-bottom: 50px;
+}
+
+/* Header Styling */
+.header {
+  position: sticky;
+  top: 0;
+  background: linear-gradient(90deg, #6dd5fa, #2980b9);
+  color: #ffffff;
+  text-align: center;
+  padding: 1em 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+.header h2 {
+  font-size: 2rem;
+  letter-spacing: 1.5px;
+}
+
+/* N-Queen Controls */
+.n-queen {
+  text-align: center;
+  padding: 2em 1em;
+  background: rgba(0, 0, 0, 0.5);
+  margin: 2em auto;
+  width: 90%;
+  max-width: 500px;
+  border-radius: 12px;
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.inputbox {
+  position: relative;
+  margin: 1.5em 0;
+}
+
+.numberbox {
+  width: 100%;
+  padding: 12px 5px;
+  font-size: 1.1rem;
+  border: none;
+  border-bottom: 2px solid #6dd5fa;
+  background: transparent;
+  color: #ecf0f1;
+  transition: 0.3s ease-in-out;
+}
+
+.numberbox:focus {
+  border-bottom: 2px solid #ffffff;
+  outline: none;
+}
+
+.inputbox label {
+  position: absolute;
+  top: 12px;
+  left: 5px;
+  color: #6dd5fa;
+  font-size: 1rem;
+  pointer-events: none;
+  transition: 0.3s ease-in-out;
+}
+
+.numberbox:focus ~ label,
+.numberbox:valid ~ label {
+  top: -18px;
+  font-size: 0.9rem;
+  color: #ffffff;
+}
+
+.slider-container {
+  margin: 1.5em 0;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 10px;
+  background: #6dd5fa;
+  border-radius: 5px;
+  outline: none;
+  transition: background 0.3s;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: #ffffff;
+  cursor: pointer;
+  border-radius: 50%;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+}
+
+.slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: #ffffff;
+  cursor: pointer;
+  border-radius: 50%;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+}
+
+.play-button {
+  background: linear-gradient(90deg, #ff7675, #d63031);
+  color: #ffffff;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.play-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 5px 15px rgba(255, 118, 117, 0.5);
+}
+
+/* Queen Arrangement Info */
+.queen-arrangement {
+  text-align: center;
+  margin-top: 2em;
+  font-size: 1.2rem;
+  color: #6dd5fa;
+}
+
+/* Board Styling */
+#n-queen-board {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 2em;
+  gap: 20px;
+}
+
+#n-queen-board div {
+  background: #2d3436;
+  border-radius: 12px;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+}
+
+table {
+  border-collapse: collapse;
+  margin: 10px auto;
+}
+
+td {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 1.5rem;
+  color: #ecf0f1;
+  transition: background-color 0.3s;
+}
+
+td:nth-child(odd) {
+  background: #1e272e;
+}
+
+td:nth-child(even) {
+  background: #34495e;
+}
+
+/* Board Header */
+h4 {
+  background: linear-gradient(90deg, #6dd5fa, #2980b9);
+  color: #ffffff;
+  padding: 10px;
+  text-align: center;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+/* Connect Button */
+.center-button {
+  text-align: center;
+  margin: 2em 0;
+}
+
+.button {
+  display: inline-block;
+  padding: 15px 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  background: linear-gradient(90deg, #6dd5fa, #2980b9);
+  text-decoration: none;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-in-out;
+}
+
+.button:hover {
+  background: linear-gradient(90deg, #2980b9, #6dd5fa);
+  transform: scale(1.1);
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.4);
 }
